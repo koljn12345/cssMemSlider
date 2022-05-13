@@ -1,0 +1,46 @@
+.slider {
+    width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+input {
+ display: none;
+}
+
+.slider__items {
+    display: flex;
+    width: 400%;
+    
+}
+.slider__item {
+    text-align: center;
+    width: 800px;
+    transition: 0.5s;
+}
+
+
+input:checked#slide1~ .navigation label[for="slide1"] {
+    color: red;
+}
+input:checked#slide2~ .navigation label[for="slide2"] {
+    color: red;
+}
+input:checked#slide3~ .navigation label[for="slide3"] {
+    color: red;
+}
+input:checked#slide4~ .navigation label[for="slide4"] {
+    color: red;
+}
+
+input:checked#slide1 ~ .slider__items > .slider__item:first-child {
+    margin-left: 0;
+}
+input:checked#slide2 ~ .slider__items > .slider__item:first-child {
+    margin-left: -25%;
+}
+input:checked#slide3 ~ .slider__items > .slider__item:first-child {
+    margin-left: -50%;
+}
+input:checked#slide4 ~ .slider__items > .slider__item:first-child {
+    margin-left: -75%;
+}
