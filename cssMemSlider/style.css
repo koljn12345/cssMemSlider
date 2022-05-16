@@ -1,0 +1,107 @@
+html {
+    font-size: 62.5%;
+}
+body {
+    background: #2a3c3a;
+    color: white;
+}
+.slider {
+    width: 70rem;
+    margin: 3rem auto 0;
+    overflow-x: clip;
+}
+input {
+ display: none;
+}
+
+.slider__items {
+    display: flex;
+    width: 400%;
+    font-size: 2.5rem;
+    
+}
+.slider__item {  
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column; 
+    text-align: center; 
+    width: 70rem;
+    transition: 0.5s;
+}
+.slider__item p {
+    text-align: left;
+}
+img {
+    max-height: 50rem;
+    width: 70rem;
+    border-radius: 0.5rem;
+}
+.navigation {
+    text-align: right;
+    margin-top: -5rem;
+    padding: 0;
+}
+.navigation-btn {
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.navigation-btn span {
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    background-color: aqua;
+    border-radius: 100%;
+    border: 0.2rem solid aqua;    
+    transition: 0.2s;
+}
+.navigation-btn:hover span {
+    background-color: white;
+    border-color: white;
+}
+
+input:checked#slide1~ .navigation label[for="slide1"] span {
+    background:none;
+}
+input:checked#slide2~ .navigation label[for="slide2"] span{
+    background:none;
+}
+input:checked#slide3~ .navigation label[for="slide3"] span{
+    background:none;
+}
+input:checked#slide4~ .navigation label[for="slide4"] span{
+    background:none;
+}
+
+input:checked#slide1 ~ .slider__items > .slider__item:first-child {
+    margin-left: 0;
+}
+input:checked#slide2 ~ .slider__items > .slider__item:first-child {
+    margin-left: -25%;
+}
+input:checked#slide3 ~ .slider__items > .slider__item:first-child {
+    margin-left: -50%;
+}
+input:checked#slide4 ~ .slider__items > .slider__item:first-child {
+    margin-left: -75%;
+}
+
+@media (max-width: 768px ) {
+    .slider {
+        width: 40rem;
+    }
+    .slider__item {   
+        width: 40rem;
+        align-items: center;
+    }
+    .slider__item p {
+        transform: translate(0, 4rem);
+    }
+    img {
+        width: 40rem;
+    }
+    .navigation {
+        text-align: center;
+    }
+}
