@@ -1,5 +1,13 @@
+html {
+    font-size: 62.5%;
+}
+body {
+    background: #2a3c3a;
+    color: white;
+}
 .slider {
-    width: 800px;
+    width: 80rem;
+    height: 50rem;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -10,26 +18,55 @@ input {
 .slider__items {
     display: flex;
     width: 400%;
+    font-size: 1.6rem;
     
 }
-.slider__item {
-    text-align: center;
-    width: 800px;
+.slider__item {   
+    text-align: center; 
+    width: 80rem;
     transition: 0.5s;
 }
+.slider__item p {
+    text-align: left;
+}
+img {
+    max-height: 40rem;
+}
+.navigation {
+    text-align: right;
+    margin-top: -3.7rem;
+    padding: 0;
+}
+.navigation-btn {
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.navigation-btn span {
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    background-color: aqua;
+    border-radius: 100%;
+    border: 0.2rem solid aqua;
+}
+.navigation-btn:hover span {
+    background-color: white;
+    border-color: white;
+}
 
-
-input:checked#slide1~ .navigation label[for="slide1"] {
-    color: red;
+input:checked#slide1~ .navigation label[for="slide1"] span {
+    background:none;
 }
-input:checked#slide2~ .navigation label[for="slide2"] {
-    color: red;
+input:checked#slide2~ .navigation label[for="slide2"] span{
+    background:none;
 }
-input:checked#slide3~ .navigation label[for="slide3"] {
-    color: red;
+input:checked#slide3~ .navigation label[for="slide3"] span{
+    background:none;
 }
-input:checked#slide4~ .navigation label[for="slide4"] {
-    color: red;
+input:checked#slide4~ .navigation label[for="slide4"] span{
+    background:none;
 }
 
 input:checked#slide1 ~ .slider__items > .slider__item:first-child {
