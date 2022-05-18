@@ -97,6 +97,7 @@ input:checked#slide4 ~ .slider__items > .slider__item:first-child {
     }
     .slider__item p {
         transform: translate(0, 4rem);
+        align-self: start;
     }
     img {
         width: 40rem;
